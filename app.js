@@ -7,15 +7,15 @@ function updateClock() {
   let hour = new Date().getHours();
   let minute = new Date().getMinutes();
   let second = new Date().getSeconds();
-  let ampm = 'PM';
+  let ampm = 'AM';
 
   hour = hour < 10 ? '0' + hour : hour;
   minute = minute < 10 ? '0' + minute : minute;
   second = second < 10 ? '0' + second : second;
 
-  if (hour < 12) {
+  if (hour > 12) {
     hour -= 12;
-    ampm = "AM";
+    ampm = 'PM';
   } 
 
   hourElement.innerText = hour;
