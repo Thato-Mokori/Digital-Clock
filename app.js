@@ -13,8 +13,7 @@ function updateClock() {
   minute = minute < 10 ? '0' + minute : minute;
   second = second < 10 ? '0' + second : second;
 
-  if (hour > 12) {
-    hour -= 12;
+  if (hour >= 12) {
     ampm = 'PM';
   } 
 
